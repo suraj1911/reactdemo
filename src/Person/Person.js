@@ -1,21 +1,17 @@
-import React from 'react'
+import React from 'react';
+import classes from './Person/Person.module.css';
 
+//import Radium from 'radium';
+let btnClass = [classes.Button];
 const Person =(props) => {
-            const style = {
-                border:"1px solid black",
-                height:"50px",
-                width: "30%",
-                marginBottom:"5px",
-                padding:"13px 0px",
-                display:"block",
-                margin:"auto"
-            }
+        
             return(
-                <div style={style}>
+                <div >
                     <input type = 'checkbox' name='chk' checked={props.check} onChange = {props.click}/> {props.name}
                     <input type="text" onChange={props.change} />
+                    <button className={btnClass.join(' ')}>New Button</button>
                 </div>   
             )
 } 
 
-export default Person
+export default Person;
